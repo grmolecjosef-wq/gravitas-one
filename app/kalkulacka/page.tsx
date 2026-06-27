@@ -25,14 +25,13 @@ export default function Kalkulacka() {
   const fmt = (n: number) => Math.round(n).toLocaleString("cs-CZ") + " Kč";
 
   return (
-    <main className="min-h-screen bg-slate-50 p-8">
+    <main className="p-8">
       <div className="max-w-3xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-2xl font-semibold text-slate-900">Investiční kalkulačka</h1>
-          <p className="text-sm text-slate-500">Gravitas One</p>
-        </div>
+      <div className="mb-8">
+  <h1 className="text-xl font-semibold text-slate-900">Investiční kalkulačka</h1>
+</div>
 
-        <div className="bg-white rounded-xl border border-slate-200 p-6 mb-6">
+        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 mb-6">
           <div className="mb-5">
             <div className="flex justify-between text-sm mb-1">
               <span className="text-slate-600">Cena nemovitosti</span>
@@ -79,7 +78,7 @@ export default function Kalkulacka() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200 p-6">
+        <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
           <h2 className="text-sm font-medium text-slate-900 mb-4">Výsledky</h2>
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>

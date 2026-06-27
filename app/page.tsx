@@ -13,23 +13,25 @@ export default function Dashboard() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50 p-8">
+    <main className="p-8">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-8">
-          <h1 className="text-2xl font-semibold text-slate-900">Gravitas One</h1>
-          <p className="text-sm text-slate-500">Realitní operační systém · beta</p>
-        </div>
+      <div className="mb-8">
+  <h1 className="text-xl font-semibold text-slate-900">Dashboard</h1>
+</div>
 
-        <div className="grid grid-cols-4 gap-4 mb-8">
-          {metrics.map((m) => (
-            <div key={m.label} className="bg-white rounded-xl border border-slate-200 p-4">
-              <div className="text-xs text-slate-500 mb-1">{m.label}</div>
-              <div className="text-xl font-semibold text-slate-900">{m.value}</div>
-            </div>
-          ))}
-        </div>
+<div className="grid grid-cols-4 gap-4 mb-8">
+  {metrics.map((m) => (
+    <div
+      key={m.label}
+      className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 hover:shadow-md transition-shadow"
+    >
+      <div className="text-xs font-medium text-slate-500 mb-2">{m.label}</div>
+      <div className="text-2xl font-bold text-slate-900">{m.value}</div>
+    </div>
+  ))}
+</div>
 
-        <div className="bg-white rounded-xl border border-slate-200 p-5">
+<div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
           <h2 className="text-sm font-medium text-slate-900 mb-4">Poslední nemovitosti</h2>
           <div className="divide-y divide-slate-100">
             {properties.map((p) => (
@@ -40,7 +42,9 @@ export default function Dashboard() {
                 </div>
                 <div className="text-right">
                   <div className="text-sm font-medium text-slate-900">{p.price}</div>
-                  <div className="text-xs text-blue-600">{p.status}</div>
+                  <span className="inline-block text-xs font-medium text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full mt-1">
+  {p.status}
+</span>
                 </div>
               </div>
             ))}

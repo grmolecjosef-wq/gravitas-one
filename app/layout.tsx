@@ -28,17 +28,29 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-      <nav className="bg-white border-b border-slate-200 px-8 py-3">
-    <div className="max-w-5xl mx-auto flex gap-6">
-      <Link href="/" className="text-sm font-medium text-slate-700 hover:text-blue-600">
+      <body> <div className="flex min-h-screen bg-slate-50">
+  <aside className="w-56 bg-slate-900 text-slate-300 flex flex-col">
+    <div className="px-5 py-5 border-b border-slate-800">
+      <div className="text-white font-semibold text-sm tracking-wide">GRAVITAS ONE</div>
+      <div className="text-xs text-slate-500 mt-0.5">Realitní OS · beta</div>
+    </div>
+    <nav className="flex-1 py-3">
+      <Link
+        href="/"
+        className="flex items-center gap-2 px-5 py-2.5 text-sm hover:bg-slate-800 hover:text-white"
+      >
         Dashboard
       </Link>
-      <Link href="/kalkulacka" className="text-sm font-medium text-slate-700 hover:text-blue-600">
+      <Link
+        href="/kalkulacka"
+        className="flex items-center gap-2 px-5 py-2.5 text-sm hover:bg-slate-800 hover:text-white"
+      >
         Kalkulačka
       </Link>
-    </div>
-  </nav>{children}</body>
+    </nav>
+  </aside>
+  <div className="flex-1">{children}</div>
+</div></body>
     </html>
   );
 }
